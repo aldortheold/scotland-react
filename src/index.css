@@ -31,7 +31,7 @@ body {
     transition: color 0.5s ease;
 }
 
-.content {
+.container {
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 1em;
@@ -62,33 +62,22 @@ body {
     margin-top: 1rem;
 }
 
-.system button {
-    width: 48%;
+.translate {
+    background: linear-gradient(to right, hsl(259, 88%, 20%), hsl(235, 54%, 50%));
+    width: 98%;
     height: 2.5rem;
     font-size: 1.3rem;
     font-family: "Fira Sans", sans-serif;
     color: white;
-    margin: 1rem 0;
+    margin: 1rem 0rem;
     padding: 0.3rem;
     border-radius: 10px;
     border: none;
     cursor: pointer;
 }
 
-.translate {
-    background: linear-gradient(to right, hsl(259, 88%, 20%), hsl(235, 54%, 50%));
-}
-
-.next {
-    background: linear-gradient(to left, hsl(259, 88%, 20%), hsl(235, 54%, 50%));
-}
-
 .translate:hover {
     background: linear-gradient(to right, hsl(259, 87%, 15%), hsl(235, 54%, 45%));
-}
-
-.next:hover {
-    background: linear-gradient(to left, hsl(259, 88%, 15%), hsl(235, 54%, 45%));
 }
 
 .slider {
@@ -150,7 +139,7 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    .content {
+    .container {
         display: flex;
         flex-direction: column;
     }
@@ -172,7 +161,7 @@ body {
     }
 
     .system button {
-        width: 45%;
+        width: 98%;
         height: 2.2rem;
         font-size: 1rem;
         margin: 0.4rem;

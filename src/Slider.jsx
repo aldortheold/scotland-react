@@ -2,7 +2,11 @@ import React, {useState, useEffect, useRef} from "react";
 
 function Slider(props) {
 
-    const btnRefs = [useRef(null), useRef(null)];
+    const btnRefs = [];
+    for (let i = 0; i < 4; i++) {
+        btnRefs.push(useRef(null))
+    }
+
     const slides = [];
     for (let i = 0; i < 10; i++) {
         slides.push(useRef(null))
@@ -52,14 +56,12 @@ function Slider(props) {
     }
 
     return (
-        <div className="gallery">
-            <div className="slider">
-                <div className="slides">
-                    {images}
-                </div>
-                <button className="previousImg" onClick={previousSlide} ref={btnRefs[0]}>&#10094;</button>
-                <button className="nextImg" onClick={nextSlide} ref={btnRefs[1]}>&#10095;</button>
+        <div className="slider">
+            <div className="slides">
+                {images}
             </div>
+            <button className="previousImg" onClick={previousSlide} ref={btnRefs[0]}>&#10094;</button>
+            <button className="nextImg" onClick={nextSlide} ref={btnRefs[1]}>&#10095;</button>
         </div>
     )
 }
